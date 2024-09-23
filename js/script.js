@@ -37,8 +37,15 @@ for (let i = 0; i < donateMoneyBtn.length; i++) {
       let value = input[1].value;
       if (value > 0) {
         donationamount[1].innerText =
-              parseFloat(donationamount[1].innerText) + parseFloat(value);
-          headeramount.innerText = parseFloat(headeramount.innerText) - parseFloat(value);
+          parseFloat(donationamount[1].innerText) + parseFloat(value);
+        headeramount.innerText =
+          parseFloat(headeramount.innerText) - parseFloat(value);
+        const time = new Date();
+        let text = `<div class="p-8 rounded-2xl shadow-historycardShadow mb-2">
+           <h2 class="text-xl font-bold text-secondary"> ${value} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+           <p class="text-base font-light text-textColor">${time}</p>
+        </div>`;
+        historyDiv.innerHTML += text;
         input[1].value = "";
         modal.showModal();
       } else {
@@ -46,31 +53,43 @@ for (let i = 0; i < donateMoneyBtn.length; i++) {
         input[1].value = "";
       }
     } else if (e.target.classList[0].toLowerCase() === "noakhali") {
-        let value = input[0].value;
-        if (value > 0) {
-          donationamount[0].innerText =
-            parseFloat(donationamount[0].innerText) + parseFloat(value);
-          headeramount.innerText =
-            parseFloat(headeramount.innerText) - parseFloat(value);
-          input[0].value = "";
-          modal.showModal();
-        } else {
-          alert("Your amount is not valid");
-          input[0].value = "";
-        }
+      let value = input[0].value;
+      if (value > 0) {
+        donationamount[0].innerText =
+          parseFloat(donationamount[0].innerText) + parseFloat(value);
+        headeramount.innerText =
+          parseFloat(headeramount.innerText) - parseFloat(value);
+        const time = new Date();
+        let text = `<div class="p-8 rounded-2xl shadow-historycardShadow mb-2">
+           <h2 class="text-xl font-bold text-secondary"> ${value} Taka is Donate for Flood at Noakhali, Bangladesh</h2>
+           <p class="text-base font-light text-textColor">${time}</p>
+        </div>`;
+        historyDiv.innerHTML += text;
+        input[0].value = "";
+        modal.showModal();
+      } else {
+        alert("Your amount is not valid");
+        input[0].value = "";
+      }
     } else {
-        let value = input[2].value;
-        if (value > 0) {
-          donationamount[2].innerText =
-            parseFloat(donationamount[2].innerText) + parseFloat(value);
-          headeramount.innerText =
-            parseFloat(headeramount.innerText) - parseFloat(value);
-          input[2].value = "";
-          modal.showModal();
-        } else {
-          alert("Your amount is not valid");
-          input[2].value = "";
-        }
+      let value = input[2].value;
+      if (value > 0) {
+        donationamount[2].innerText =
+          parseFloat(donationamount[2].innerText) + parseFloat(value);
+        headeramount.innerText =
+          parseFloat(headeramount.innerText) - parseFloat(value);
+        const time = new Date();
+        let text = `<div class="p-8 rounded-2xl shadow-historycardShadow mb-2">
+           <h2 class="text-xl font-bold text-secondary"> ${value} Taka is Aid for Injured in the Quota Movement</h2>
+           <p class="text-base font-light text-textColor">${time}</p>
+        </div>`;
+        historyDiv.innerHTML += text;
+        input[2].value = "";
+        modal.showModal();
+      } else {
+        alert("Your amount is not valid");
+        input[2].value = "";
+      }
     }
   });
 }
