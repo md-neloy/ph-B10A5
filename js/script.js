@@ -100,4 +100,4 @@ for (let i = 0; i < donateMoneyBtn.length; i++) {
 // link with another html page
 document.getElementById("blog").addEventListener("click", () => {
   location.href = "/ph-B10A5/blog.html";
-})
+});
