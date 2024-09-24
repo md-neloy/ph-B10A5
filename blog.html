@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lexend: ["Lexend", "sans-serif"],
+            },
+            colors: {
+              bgColor: "#F9F7F3",
+              primary: "#B4F461",
+              secondary: "#111111",
+              textColor: "rgba(17,17,17,0.7)",
+            },
+            boxShadow: {
+              historycardShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+            },
+            animation:{
+                shake: "infinite linear reverse"
+            }
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lexend">
+    <header class="sticky top-0 left-0 w-full bg-white pb-1 z-30">
+      <div id="menubar" class="py-6 bg-[rgba(249,247,243)]">
+        <nav class="px-4 md:px-0 container mx-auto flex gap-4 md:gap-0 flex-wrap justify-between items-center">
+          <button
+            id="home"
+            class="btn bg-primary text-secondary font-semibold text-xl w-[110px] hover:bg-primary hover:scale-y-100"
+          >
+            Home
+          </button>
+          <div class="flex gap-4 justify-between items-center">
+            <div>
+              <img src="assets/logo.png" alt="logo" />
+            </div>
+            <p class="capitalize text-secondary font-semibold text-xl">
+              Donate Bangladesh
+            </p>
+          </div>
+          <p
+            class="flex gap-3 justify-center items-center text-textColor font-medium text-xl"
+          >
+            <span><img src="assets/coin.png" alt="coin" /></span>
+            <span id="headeramount">5000</span>
+            <span class="uppercase">BDT</span>
+          </p>
+        </nav>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <h2 class="text-3xl font-bold text-secondary animate-shake mb-4 mt-6">FAQ?</h2>
+      <div
+        class="collapse collapse-arrow bg-base-200 mb-4 bg-white shadow-historycardShadow"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is DOM?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each node in the tree is an object representing a part of the document. This can include elements, attributes, and text within an HTML or XML document.</p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-base-200 mb-4 bg-white shadow-historycardShadow"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is dom EventListener?
+        </div>
+        <div class="collapse-content">
+          <p>A DOM EventListener is a mechanism in JavaScript that allows you to listen for and respond to specific events that occur on elements within the Document Object Model (DOM). Events can include user actions like clicking a button, typing in a text field, hovering over an element, or loading a page</p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-base-200 mb-4 bg-white shadow-historycardShadow"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          what is map function in js?
+        </div>
+        <div class="collapse-content">
+          <p>The map function is a built-in method in JavaScript (and many other programming languages) that allows you to create a new array by applying a specified function to each element of an existing array. It’s a powerful tool for transforming arrays in a concise and readable way.</p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-base-200 mb-4 bg-white shadow-historycardShadow"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is Object in js?
+        </div>
+        <div class="collapse-content">
+          <p>In JavaScript, an object is a complex data type that allows you to store collections of key-value pairs. These pairs are referred to as properties, where each property has a name (also called a key) and a value. Objects are fundamental to JavaScript and are used to represent and manage data in a structured way.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/blog.js"></script>
+  </body>
+</html>

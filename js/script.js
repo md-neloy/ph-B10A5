@@ -1,10 +1,13 @@
 const header = document.getElementsByTagName("header")[0];
+const menubar = document.getElementById("menubar");
 window.addEventListener("scroll", (e) => {
   let value = window.scrollY;
   if (value < 74) {
     header.classList.add("bg-white");
+    menubar.classList.add("bg-[rgba(249,247,243)]");
   } else {
-    header.classList.add("bg-[rgba(255,255,255,0.5)]");
+    header.classList.add("bg-[rgba(255,255,255,0.7)]");
+    menubar.classList.add("bg-[rgba(249,247,243,0.7)]");
   }
 });
 
@@ -93,3 +96,8 @@ for (let i = 0; i < donateMoneyBtn.length; i++) {
     }
   });
 }
+
+// link with another html page
+document.getElementById("blog").addEventListener("click", () => {
+  location.href = "../blog.html";
+})
