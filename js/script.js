@@ -99,5 +99,5 @@ for (let i = 0; i < donateMoneyBtn.length; i++) {
 
 // link with another html page
 document.getElementById("blog").addEventListener("click", () => {
-  location.href = "../blog.html";
+  location.href = "blog.html";
 })
