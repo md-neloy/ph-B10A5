@@ -1,5 +1,5 @@
 document.getElementById("home").addEventListener("click", () => {
-  location.href = "index.html";
+  location.href = "/ph-B10A5/index.html";
 });
 // sticky navbar
 const header = document.getElementsByTagName("header")[0];
