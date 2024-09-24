@@ -1,5 +1,5 @@
 document.getElementById("home").addEventListener("click", () => {
-  location.href = "../index.html";
+  location.href = "index.html";
 });
 // sticky navbar
 const header = document.getElementsByTagName("header")[0];
@@ -15,5 +15,3 @@ window.addEventListener("scroll", (e) => {
     menubar.classList.add("bg-[rgba(249,247,243,0.7)]");
   }
 });
-
-
